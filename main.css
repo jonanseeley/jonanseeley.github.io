@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  background-color: #f4f4f4;
+  min-height: 100% !important;
+  height: 100%;
+}
+
+.page {
+  width: 920px;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.sidebar {
+  background-color: white;
+  height: 100%;
+  padding: 70px 30px;
+  margin-right: 20px;
+  width: 150px;
+  float: left;
+}
+
+.sidebar .profile {
+  border-radius: 50%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.sidebar img {
+  width: 18px;
+  padding-right: 4px;
+}
+
+.sidebar ul {
+  padding-top: 10px;
+  width: 100%;
+}
+
+.sidebar li {
+  display: inline-table;
+  float: left;
+  text-align: center;
+  padding: 2px 0;
+}
+
+.sidebar li img {
+  width: 32px;
+  margin: 0 auto;
+  padding: 0 9px;
+}
+
+.sidebar h4 {
+  font-weight: normal;
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.sidebar p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.right {
+  overflow: hidden;
+}
+
+.navbar {
+  display: block;
+  padding: 30px;
+  padding-bottom: 60px;
+  margin: 20px 0;
+  background-color: white;
+}
+
+.navbar li {
+  text-align: center;
+  display: inline;
+  font-size: 24px;
+  float: left;
+  width: 33%;
+}
+
+ul {
+  list-style: none;
+}
+
+li, p, h2, h4 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+.content {
+  padding: 20px;
+}
+
+.content h2 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 32px;
+}
