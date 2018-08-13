@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 2.5em;
+  padding-bottom: 15px;
+  padding-top: 20px;
+}
+
+.blog {
+  margin-top: 50px;
+  max-width: 650px;
+  width: 80%;
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, 0);
+}
+
+.blog h2 {
+  font-weight: 200;
+}
+
+.blog h3 {
+  font-size: 1em;
+}
+
+.blog p {
+  padding: 10px 0;
+}
+
+.blog ul {
+  float: right;
+}
+
+.blog a {
+  text-decoration: none;
+  color: black;
+}
+
+.blog li {
+  display: inline-table;
+  padding-right: 10px;
+}
+
+#iterm, #pdf {
+  width: 100%;
+  margin-bottom: -20px;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  background-color: white;
+  bottom: 0;
+}
+
+.page {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+footer .icons {
+  padding: 15px 0;
+  margin: 0 auto;
+}
+
+footer .icons li {
+  display: inline-table;
+  text-align: center;
+  padding: 0;
+}
+
+footer .icons li img {
+  height: 40px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+li, p, h1, h2, h3, h4 {
+  font-family: 'Open Sans', sans-serif;
+}

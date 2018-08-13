@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jonan Seeley | Blog - txtToLaTeX</title>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="blog.css">
+  </head>
+  <body>
+    <div class="page">
+      <div class="blog">
+        <ul>
+          <li><a href="../index.html">home</a></li>
+          <li><a href="../about.html">about</a></li>
+          <li><a href="../projects.html">projects</a></li>
+          <li><a href="blog.html">blog</a></li>
+          <li><a href="../Jonan Seeley Resume.pdf">resume</a></li>
+        </ul>
+        <h1>txtToLaTeX</h1>
+        <p>&emsp;&emsp;I was sitting in my Global Histories lecture in the Spring semester of my Freshman year, and I was frustrated by writing all my notes in a notebook.  I'm awful when it comes to writing things quickly by hand, so slides were passing by before I was able to take all the notes I wanted to take.  Given that the class was heavily structured around these lectures and no notes or slides were posted online, I decided to start taking notes on my computer instead.</p>
+        <p>&emsp;&emsp;While I know that studies have shown that people tend to retain information more poorly when they take notes using a computer compared to taking notes via the more classic pen and paper, I had to choose between better retention of the information I was able to write down and missing information or retaining all the information more poorly but having a full set of notes to look back on.  Given that I'm writing this post, you can probably assume which choice I made.</p>
+        <p>&emsp;&emsp;While I was more than happy to take notes using my computer since I enjoy typing, I wanted to use Vim in order to practice using the editor and since Microsoft Word has failed me more times than I'd like to remember.  While writing notes in a simple .txt file would be easiest, it surely wasn't the prettiest or easiest to read during review.  I had been using LaTeX recently so I tried my hand at directly writing LaTeX code during lecture.  Evidently, I realized that probably wasn't the best idea and decided to just write everything in text files with tabs to denote where a normal outline would indent.</p>
+        <p>&emsp;&emsp;At this point, I realized I could just write a Python script to transform the notes I was taking into pretty LaTeX code.  So that's exactly what I did.</p>
+        <img id="iterm" src="img/txtToLatex-iterm.png" />
+        <p>&emsp;&emsp;The above text document may be filled with information, but at least I find it very annoying to read, and I probably wouldn't want to be looking through a bunch of text files while reviewing.  So instead, after processing the file through txtToLaTeX, it looks much more presentable.</p>
+        <img id="pdf" src="img/txtToLatex-pdf.png" />
+        <p>&emsp;&emsp;You can find the source code to this project at <a href="https://github.com/jonanseeley/txtToLatex">this GitHub link</a>.  If you have improvements to make, feel free to contribute.</p>
+      </div>
+    </div>
+    <footer>
+      <ul class="icons">
+        <li><a href="mailto:jseeley@cmu.edu"><img src="../icons/mail.png"/></a></li>
+        <li><a href="https://github.com/jonanseeley/"><img src="../icons/github.png"/></a></li>
+        <li><a href="https://www.linkedin.com/in/jonan-seeley-108644161/"><img src="../icons/linkedin.png"/></a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
