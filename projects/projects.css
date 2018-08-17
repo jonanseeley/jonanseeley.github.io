@@ -14,7 +14,7 @@ h1 {
   padding-top: 20px;
 }
 
-.blog {
+.project {
   margin-top: 50px;
   max-width: 650px;
   width: 80%;
@@ -25,35 +25,59 @@ h1 {
   transform: translate(-50%, 0);
 }
 
-.blog h2 {
+.project h2 {
   font-weight: 200;
 }
 
-.blog h3 {
+.project h3 {
   font-size: 1em;
 }
 
-.blog p {
-  padding: 10px 0;
+.project p {
+  padding: 5px 0;
 }
 
-.blog ul {
+.project ul {
   float: right;
 }
 
-.blog a {
-  text-decoration: none;
+.project ul a {
   color: black;
 }
 
-.blog li {
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+.project li {
   display: inline-table;
   padding-right: 10px;
 }
 
-#iterm, #pdf {
+#iterm, #pdf, #screech-res {
   width: 100%;
   margin-bottom: -20px;
+}
+
+#screech, #pasteur {
+  width: 50%;
+  float: left;
+}
+
+#post, #pasteur-res {
+  width: 50%;
+  float: right
+}
+
+#pasteur-res {
+  transform: translate(0, 70%)
+}
+
+#img-wrap::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 footer {
