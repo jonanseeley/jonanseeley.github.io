@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124197062-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-124197062-1');
+    </script>
+    <title>Jonan Seeley | Projects - General Knowledge Quiz</title>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="projects.css">
+    <link rel="shortcut icon" type="image/png" href="../icons/favicon.png"/>
+  </head>
+  <body>
+    <div class="page">
+      <div class="project">
+        <ul>
+          <li><a href="../index.html">home</a></li>
+          <li><a href="../about.html">about</a></li>
+          <li><a href="../projects.html">projects</a></li>
+          <li><a href="../Jonan Seeley Resume.pdf">resume</a></li>
+        </ul>
+        <h1>General Knowledge Quiz</h1>
+        <p>&emsp;&emsp;I was listening to an episode of <a href="https://www.hellointernet.fm/podcast/123">Hello Internet</a> when the hosts brought up a study that posed a series of general knowledge questions to participants.  Linked in the show notes was the study they were referencing, found <a href="https://link.springer.com/article/10.3758/s13428-012-0307-9">here</a>.  I went to the study to quiz myself, but found that the questions and correct answers were located right next to each other, so it was pretty much impossible to quiz yourself.  This inspired me to make a web-version of the quiz that would allow for easy quizzing.</p>
+        <p>&emsp;&emsp;The first order of business was to scrape the study webpage to extract the questions and answers to all the questions.  This was made pretty straightforward thanks to an incredible web-scraping Python package <a href="https://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a>.  Using this module made the process as simple as finding the right column for the question/answer text and extracting that information (along with the recall rate a column to the right).  After that, I just stored each question in a JSON file for ease of use later.</p>
+        <br/>
+        <div id="img-wrap">
+          <img id=raw-questions src="img/gkq-raw-questions.png" />
+          <img id=json-questions src="img/gkq-json-questions.png" />
+        </div>
+        <p>&emsp;&emsp;After extracting the questions, answers, and recall rate, it was a pretty straightforward process to make a quiz out of it using Javascript.  At this point, I hadn't made much using Javascript and wanted to get more familiar, so this was a nice small intro to the language.  I also decided to use some Bootstrap features to get acquainted with some of the features and to lessen my design work.</p>
+        <br/>
+        <img id=example-question src="img/gkq-example.png" />
+        <br/>
+        <br/>
+        <p>&emsp;&emsp;There is still more work that could be done to make the site more mobile-friendly and potentially not allow the user to choose "I was right!" if their answer was starkly different from the expected answer.  If you want to play the quiz yourself, go <a href="../general-knowledge-quiz/index.html">here</a>.  You can find the source code to this project <a href="https://github.com/jonanseeley/general-knowledge-quiz">here</a>.</p>
+      </div>
+    </div>
+    <footer>
+      <ul class="icons">
+        <li><a href="mailto:jseeley@cmu.edu"><img src="../icons/mail.png"/></a></li>
+        <li><a href="https://github.com/jonanseeley/"><img src="../icons/github.png"/></a></li>
+        <li><a href="https://www.linkedin.com/in/jonan-seeley-108644161/"><img src="../icons/linkedin.png"/></a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  min-height: 100%;
+  height: 100%;
+}
+
+#content-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  background-color: #d8f9ff;
+}
+
+.centered {
+  position: absolute;
+  min-width: 800px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3em;
+  background-color: #fcfcfc;
+}
+
+#user-input {
+  width: 100%;
+  height: 1.5em;
+  display: block;
+  margin-top: 1em;
+}
+
+#curr-score {
+  text-align: left;
+}
+
+#survey-percent {
+  text-align: right;
+  font-size: .75em;
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Test your general knowledge!</title>
+    <!-- Bootstrap Stuff -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  <body>
+    <div id="content-wrapper">
+      <div id="intro" class="centered">
+        <h1>Test your general knowledge!</h1>
+        <p>The following quiz consists of 299 questions to test your general knowledge.  Each question has a single word for it's answer, so make sure to read each question carefully!  If you got a question wrong due to a typo, feel free to choose the "I was right!" option.  These questions are from the following (very interesting) paper: <a href="https://doi.org/10.3758/s13428-012-0307-9">General knowledge norms</a></p>
+        <button id="begin-quiz" type="button" class="btn btn-primary">Begin Quiz!</button>
+      </div>
+      <div id="content" class="centered" style="display: none">
+        <div id="quiz-info">
+          <div class="row">
+            <div id="curr-score" class="col">0/0</div>
+            <div id="correctness" class="col-7"></div>
+            <div id="survey-percent" class="col"></div>
+          </div>
+        </div>
+        <br />
+        <p id="question"></p>
+        <div id="user-input">
+          <div class="form-row">
+            <div class="col-7">
+              <input id="answer" type="text" class="form-control"/>
+            </div>
+            <div class="col-3">
+              <button id="submit" type="button" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="col">
+              <button id="close-enough" type="button" class="btn btn-primary" class="display:none">I was right!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

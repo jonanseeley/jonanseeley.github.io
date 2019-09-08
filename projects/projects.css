@@ -37,11 +37,11 @@ h1 {
   padding: 5px 0;
 }
 
-.project ul {
+.nav {
   float: right;
 }
 
-.project ul a {
+.nav a {
   color: black;
 }
 
@@ -50,22 +50,22 @@ a {
   color: blue;
 }
 
-.project li {
+.nav li {
   display: inline-table;
   padding-right: 10px;
 }
 
-#iterm, #pdf, #screech-res {
+#iterm, #pdf, #screech-res, #example-question {
   width: 100%;
   margin-bottom: -20px;
 }
 
-#screech, #pasteur {
+#screech, #pasteur, #raw-questions {
   width: 50%;
   float: left;
 }
 
-#post, #pasteur-res {
+#post, #pasteur-res, #json-questions {
   width: 50%;
   float: right
 }
