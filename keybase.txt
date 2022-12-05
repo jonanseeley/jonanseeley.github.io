@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/jonanseeley
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jseeley.xyz
+  * I am jonanseeley (https://keybase.io/jonanseeley) on keybase.
+  * I have a public key ASBpNNg-MgtriOdKy7h2KSTdQmXwPfYLkKl9XHi0YxI96Ao
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01206934d83e320b6b88e74acbb8762924dd4265f03df60b90a97d5c78b463123de80a",
+      "host": "keybase.io",
+      "kid": "01206934d83e320b6b88e74acbb8762924dd4265f03df60b90a97d5c78b463123de80a",
+      "uid": "4327123d452b8619a811fb9019d1c819",
+      "username": "jonanseeley"
+    },
+    "merkle_root": {
+      "ctime": 1670260437,
+      "hash": "6d1fb2e63e09d9da41ef2d923a12c55048bbfee390bdf29f8d298d38b125ec7d1c20a0a4eb6702118fa76c6bbf4c4d02aa5629804ce9694f32f828d497dda15c",
+      "hash_meta": "9d123ea2da96a7ef23984a20eaa81538cfa8029814e14c0cf6048dc3f0f25266",
+      "seqno": 23668375
+    },
+    "service": {
+      "entropy": "T9kpkussUP9aqL9sD8NCN/a2",
+      "hostname": "jseeley.xyz",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.1"
+  },
+  "ctime": 1670260497,
+  "expire_in": 504576000,
+  "prev": "436a2457b5825329800d5fd2f1111a714f085a11cd0e85c16b9d3553b22d5394",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgaTTYPjILa4jnSsu4dikk3UJl8D32C5CpfVx4tGMSPegKp3BheWxvYWTESpcCBcQgQ2okV7WCUymADV/S8REacU8IWhHNDoXBa501U7ItU5TEINp6YP22a3MR46nMCowh3AkP+GTjC1wJBHYcEPoXBjwxAgHCo3NpZ8RAEJfI+xBBSOwKSQC8RPBt83LOlDm2luvHPoXva0C6yvhl5TuAEgGj41m5u+YwCdKEiLZxAW+DIkb22JSh1RxwD6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIGWBpzlaXdpROjeI1j3WN4jtpd6kvl6AP1+LBJ0YPZMeo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jonanseeley
+
+==================================================================
