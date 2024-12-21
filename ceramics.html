@@ -80,6 +80,8 @@
       <!-- Modal for enlarged images -->
       <div id="imageModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
+        <span class="nav-btn prev" onclick="changeImage(-1)">&#10094;</span>
+        <span class="nav-btn next" onclick="changeImage(1)">&#10095;</span>
         <img id="modalImage" class="modal-content">
       </div>
 
@@ -93,15 +95,48 @@
     </div>
 
     <script>
+      let currentImageIndex = 0;
+      let touchStartX = 0;
+      let touchEndX = 0;
+
       function openModal(imgSrc) {
         const modal = document.getElementById("imageModal");
         const modalImg = document.getElementById("modalImage");
         modal.style.display = "block";
         modalImg.src = imgSrc;
+        // Update currentImageIndex based on the opened image
+        currentImageIndex = images.findIndex(img => imgSrc.includes(img));
+      }
+
+      function changeImage(direction) {
+        currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+        const modalImg = document.getElementById("modalImage");
+        modalImg.src = `ceramics/${images[currentImageIndex]}.JPG`;
       }
 
       function closeModal() {
         document.getElementById("imageModal").style.display = "none";
+      }
+
+      // Add these new touch event listeners
+      document.getElementById("imageModal").addEventListener('touchstart', function(e) {
+          touchStartX = e.changedTouches[0].screenX;
+      }, false);
+
+      document.getElementById("imageModal").addEventListener('touchend', function(e) {
+          touchEndX = e.changedTouches[0].screenX;
+          handleSwipe();
+      }, false);
+
+      function handleSwipe() {
+          const swipeThreshold = 50; // minimum distance for a swipe
+          const swipeDistance = touchEndX - touchStartX;
+          
+          if (Math.abs(swipeDistance) > swipeThreshold) {
+              // Negative distance means swipe left (next image)
+              // Positive distance means swipe right (previous image)
+              changeImage(swipeDistance > 0 ? -1 : 1);
+          }
       }
     </script>
   </body>

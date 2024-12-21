@@ -93,3 +93,30 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: .8em;
 }
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 16px;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
