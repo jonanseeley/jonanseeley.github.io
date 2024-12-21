@@ -93,3 +93,18 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: .8em;
 }
+
+.modal-caption {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  max-width: 700px;
+  text-align: center;
+  color: #fff;
+  padding: 10px 0;
+  margin-bottom: 50px;
+  height: auto;
+  position: absolute;
+  top: calc(50% + 13vh);
+  left: 50%;
+  transform: translateX(-50%);
+}

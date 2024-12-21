@@ -24,53 +24,53 @@
 
       <div class="gallery">
         <script>
-          // List all your image filenames here
           const images = [
-            'thumb0',
-            'thumb1',
-            'thumb2',
-            'plate',
-            'planter3',
-            'planter4',
-            'planter0',
-            'planter1',
-            'planter2',
-            'planter5',
-            'bowl0',
-            'bowl1',
-            'bowl2',
-            'bowl3',
-            'bowl_black',
-            'bowl_black0',
-            'bowl_black1',
-            'bowl_blue',
-            'bowl_bw0',
-            'bowl_bw1',
-            'bowl_green0',
-            'bowl_green1',
-            'bowl_green2',
-            'bowl_light_green',
-            'bowl_purple',
-            'meedur_front',
-            'meedur_back',
-            'cup',
-            'mug0',
-            'mug1',
-            'mug2',
-            'mug3',
-            'mug4',
-            'spoon_rest',
-            'holder0',
-            'holder1',
+            { file: 'thumb0', caption: 'One of my first pi' },
+            { file: 'thumb1', caption: 'Hand-thrown Vessel' },
+            { file: 'thumb2', caption: 'Decorative Ceramic Piece' },
+            { file: 'plate', caption: 'Handcrafted Ceramic Plate' },
+            { file: 'planter3', caption: 'Planter' },
+            { file: 'planter4', caption: 'Planter' },
+            { file: 'planter0', caption: 'Planter' },
+            { file: 'planter1', caption: 'Planter' },
+            { file: 'planter2', caption: 'Planter' },
+            { file: 'planter5', caption: 'Planter' },
+            { file: 'bowl0', caption: 'Ceramic Bowl' },
+            { file: 'bowl1', caption: 'Ceramic Bowl' },
+            { file: 'bowl2', caption: 'Ceramic Bowl' },
+            { file: 'bowl3', caption: 'Ceramic Bowl' },
+            { file: 'bowl_black', caption: 'Ceramic Bowl' },
+            { file: 'bowl_black0', caption: 'Ceramic Bowl' },
+            { file: 'bowl_black1', caption: 'Ceramic Bowl' },
+            { file: 'bowl_blue', caption: 'Ceramic Bowl' },
+            { file: 'bowl_bw0', caption: 'Ceramic Bowl' },
+            { file: 'bowl_bw1', caption: 'Ceramic Bowl' },
+            { file: 'bowl_green0', caption: 'Ceramic Bowl' },
+            { file: 'bowl_green1', caption: 'Ceramic Bowl' },
+            { file: 'bowl_green2', caption: 'Ceramic Bowl' },
+            { file: 'bowl_light_green', caption: 'Ceramic Bowl' },
+            { file: 'bowl_purple', caption: 'Ceramic Bowl' },
+            { file: 'meedur_front', caption: 'Meedur Front' },
+            { file: 'meedur_back', caption: 'Meedur Back' },
+            { file: 'cup', caption: 'Ceramic Cup' },
+            { file: 'mug0', caption: 'Ceramic Mug' },
+            { file: 'mug1', caption: 'Ceramic Mug' },
+            { file: 'mug2', caption: 'Ceramic Mug' },
+            { file: 'mug3', caption: 'Ceramic Mug' },
+            { file: 'mug4', caption: 'Ceramic Mug' },
+            { file: 'spoon_rest', caption: 'Spoon Rest' },
+            { file: 'holder0', caption: 'Ceramic Holder' },
+            { file: 'holder1', caption: 'Ceramic Holder' }
           ];
 
           // Generate gallery items
           images.forEach((image, index) => {
             document.write(`
               <div class="gallery-item">
-                <img src="ceramics/${image}.JPG" 
-                     alt="Ceramic piece ${index + 1}" 
-                     onclick="openModal(this.src)">
+                <img src="ceramics/${image.file}.JPG" 
+                     alt="${image.caption}" 
+                     data-caption="${image.caption}"
+                     onclick="openModal(this)">
               </div>
             `);
           });
@@ -81,6 +81,7 @@
       <div id="imageModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img id="modalImage" class="modal-content">
+        <div id="modalCaption" class="modal-caption"></div>
       </div>
 
       <footer>
@@ -93,11 +94,14 @@
     </div>
 
     <script>
-      function openModal(imgSrc) {
+      function openModal(imgElement) {
         const modal = document.getElementById("imageModal");
         const modalImg = document.getElementById("modalImage");
+        const modalCaption = document.getElementById("modalCaption");
+        
         modal.style.display = "block";
-        modalImg.src = imgSrc.replace('thumb', 'full');  // Assuming you have full-size images with 'full' in filename
+        modalImg.src = imgElement.src;
+        modalCaption.textContent = imgElement.dataset.caption;
       }
 
       function closeModal() {
