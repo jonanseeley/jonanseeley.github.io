@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ceramics - Jonan Seeley</title>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="gallery.css">
+    <link rel="shortcut icon" type="image/png" href="icons/favicon.png"/>
+  </head>
+  <body>
+    <div class="page">
+        <ul class="nav">
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="3d-printing.html">3d printing</a></li>
+            <li><a href="ceramics.html">ceramics</a></li>
+            <li><a href="Jonan Seeley Resume.pdf">resume</a></li>
+        </ul>
+      <div class="bio">
+        <h2>Ceramics Gallery</h2>
+      </div>
+
+      <div class="gallery">
+        <script>
+          // List all your image filenames here
+          const images = [
+            'bowl0',
+            'bowl1',
+            'bowl2',
+            'bowl3',
+            'bowl_black',
+            'bowl_black0',
+            'bowl_black1',
+            'bowl_blue',
+            'bowl_bw0',
+            'bowl_bw1',
+            'bowl_green0',
+            'bowl_green1',
+            'bowl_green2',
+            'bowl_light_green',
+            'bowl_purple',
+            'cup',
+            'holder0',
+            'holder1',
+            'meedur_back',
+            'meedur_front',
+            'mug0',
+            'mug1',
+            'mug2',
+            'mug3',
+            'mug4',
+            'planter0',
+            'planter1',
+            'planter2',
+            'planter3',
+            'planter4',
+            'planter5',
+            'plate',
+            'spoon_rest',
+            'thumb0',
+            'thumb1',
+            'thumb2',
+          ];
+
+          // Generate gallery items
+          images.forEach((image, index) => {
+            document.write(`
+              <div class="gallery-item">
+                <img src="ceramics/${image}.JPG" 
+                     alt="Ceramic piece ${index + 1}" 
+                     onclick="openModal(this.src)">
+              </div>
+            `);
+          });
+        </script>
+      </div>
+
+      <!-- Modal for enlarged images -->
+      <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-content">
+      </div>
+
+      <footer>
+        <ul class="icons">
+          <li><a href="mailto:jonan.seeley@gmail.com"><img src="icons/mail.png"/></a></li>
+          <li><a href="https://github.com/jonanseeley/"><img src="icons/github.png"/></a></li>
+          <li><a href="https://www.linkedin.com/in/jonan-seeley/"><img src="icons/linkedin.png"/></a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <script>
+      function openModal(imgSrc) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        modal.style.display = "block";
+        modalImg.src = imgSrc.replace('thumb', 'full');  // Assuming you have full-size images with 'full' in filename
+      }
+
+      function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html> 
